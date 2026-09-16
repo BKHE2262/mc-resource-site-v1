@@ -21,7 +21,7 @@ window.MC_DATA = {
       title: "PCL2",
       version: "最新版",
       description: "简单、直观、适合新手的 Minecraft 启动器。",
-      image: "/images/fufu01.jpg",
+      image: "/assets/images/fufu01.jpg",
       tags: ["启动器", "Windows", "新手"],
       download: "#",
       tutorial: "tutorials.html#pcl2",
