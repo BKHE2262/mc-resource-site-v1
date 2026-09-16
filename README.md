@@ -1,5 +1,6 @@
 # MC Resource Hub
 
+
 一个面向朋友与社群玩家的 Minecraft 资源共享静态网站。
 
 ## 特点
