@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="给朋友与社群玩家准备的 Minecraft 资源与教程站。">
+  <title>MC Resource Hub · Minecraft 资源与教程</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Minecraft Resource Hub</div>
+        <h1>玩 Minecraft，<br>从这里开始。</h1>
+        <p>启动器、整合包、光影、材质与教程集中整理。下载之前先看教程，让每一步都清清楚楚。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="tutorials.html#start">新手快速开始</a>
+          <a class="button ghost" href="resources.html">浏览全部资源</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="hero-cube">◆</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>资源分类</h2><p class="section-intro">需要什么，直接找到对应入口。</p></div>
+      </div>
+      <div id="category-grid" class="category-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>常用资源</h2><p class="section-intro">把朋友最常用的东西放在首页。</p></div>
+        <a class="text-link" href="resources.html">查看全部 →</a>
+      </div>
+      <div id="featured-resources" class="resource-grid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>从教程开始</h2><p class="section-intro">每一个资源都尽量配套安装说明。</p></div>
+        <a class="text-link" href="tutorials.html">全部教程 →</a>
+      </div>
+      <div id="featured-tutorials" class="tutorial-list"></div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container split">
+      <div class="panel">
+        <div class="eyebrow" style="color:#a9d7b2">ABOUT</div>
+        <h2>为朋友而做，而不是为了复杂而复杂。</h2>
+        <p>本站采用纯静态架构，内容与页面分离。以后增加一个整合包，不需要重新设计页面，只需要补充资源数据。</p>
+        <a class="button ghost" href="resources.html">开始浏览</a>
+      </div>
+      <div class="panel light">
+        <h2>维护起来也很简单</h2>
+        <p>资源数据集中在 <code>assets/js/data.js</code>。图片统一放在 <code>assets/images/</code>，网站无需数据库即可运行。</p>
+        <p>GitHub 提交后，Cloudflare Pages 自动部署。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
