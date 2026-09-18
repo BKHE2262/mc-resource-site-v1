@@ -48,7 +48,7 @@
 
   function tutorialCard(item) {
     return `
-      <a class="tutorial-card reveal" href="tutorials.html#${item.id}">
+      <a class="tutorial-card reveal" href="${item.url || `tutorials.html#${item.id}`}">
         <div class="tutorial-icon">↗</div>
         <div>
           <div class="eyebrow">${escapeHTML(item.category)} · ${escapeHTML(item.time)}</div>
@@ -64,17 +64,18 @@
     if (header) {
       header.innerHTML = `
         <div class="container nav-wrap">
-          <a class="brand" href="index.html" aria-label="返回首页">
+          <a class="brand" href="/index.html" aria-label="返回首页">
             <span class="brand-mark">◆</span>
             <span>${escapeHTML(data.site.shortName)}</span>
           </a>
           <button class="menu-button" type="button" aria-label="打开菜单" aria-expanded="false">☰</button>
           <nav class="nav" aria-label="主导航">
-            <a href="index.html">首页</a>
-            <a href="launchers.html">启动器</a>
-            <a href="modpacks.html">整合包</a>
-            <a href="resources.html">全部资源</a>
-            <a href="tutorials.html">图文教程</a>
+            <a href="/index.html">首页</a>
+            <a href="/launchers.html">启动器</a>
+            <a href="/modpacks.html">整合包</a>
+            <a href="/resources.html">全部资源</a>
+            <a href="/tutorials.html">图文教程</a>
+            <a href="/about/we.html">关于</a>
           </nav>
         </div>
       `;

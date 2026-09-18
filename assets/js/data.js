@@ -36,7 +36,7 @@ window.MC_DATA = {
       image: "/assets/images/xplus_logo.jpg",
       tags: ["整合包", "Fabric", "优化"],
       download: "https://bkhe.lanzout.com/iq8d248megrc",
-      tutorial: "tutorials.html#xplus",
+      tutorial: "tutorials/tutorials_xplus.html",
       featured: true
     },
     {
@@ -92,14 +92,7 @@ window.MC_DATA = {
       featured: true
     },
     {
-      id: "hmcl",
-      title: "HMCL 安装与基础配置",
-      description: "适合第一次使用 HMCL 的玩家",
-      category: "启动器",
-      time: "约 5 分钟"
-    },
-    {
-      id: "xplus",
+      url: "tutorials/tutorials_xplus.html",
       title: "Xplus 整合包安装教程",
       description: "从下载到安装，再到第一次进入游戏",
       category: "整合包",
