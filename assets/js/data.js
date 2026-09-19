@@ -11,7 +11,8 @@ window.MC_DATA = {
     { id: "modpack", name: "整合包", icon: "◆", description: "精选整合包与朋友联机所需资源" },
     { id: "shader", name: "光影", icon: "☼", description: "让你的 Minecraft 画面更有氛围" },
     { id: "resource-pack", name: "材质包", icon: "▤", description: "改变方块、UI 与整体视觉体验" },
-    { id: "skin", name: "皮肤", icon: "◉", description: "给自己的角色换一套新外观" }
+    { id: "skin", name: "皮肤", icon: "◉", description: "给自己的角色换一套新外观" },
+    { id: "save", name: "存档", icon: "▦", description: "我们的世界" }
   ],
 
   resources: [
@@ -21,7 +22,7 @@ window.MC_DATA = {
       title: "PCL2",
       version: "最新版",
       description: "简单、直观、适合新手的(bushi) Minecraft 启动器",
-      image: "/assets/images/fufu01.jpg",
+      image: "/assets/images/pcl2.webp",
       tags: ["启动器", "Windows", "新手"],
       download: "https://bkhe.lanzout.com/ioHoq48me0hg",
       tutorial: "tutorials.html#pcl2",
@@ -35,19 +36,7 @@ window.MC_DATA = {
       description: "保持原版体验的基础优化整合包",
       image: "/assets/images/xplus_logo.jpg",
       tags: ["整合包", "Fabric", "优化"],
-      download: "https://bkhe.lanzout.com/iq8d248megrc",
-      tutorial: "tutorials/tutorials_xplus.html",
-      featured: true
-    },
-    {
-      id: "xplus",
-      category: "modpack",
-      title: "Xplus 基础优化整合包",
-      version: "26.2",
-      description: "保持原版体验的基础优化整合包",
-      image: "/assets/images/xplus_logo.jpg",
-      tags: ["整合包", "Fabric", "优化"],
-      download: "https://bkhe.lanzout.com/iq8d248megrc",
+      download: "https://bkhe.lanzout.com/izfCv494852d",
       tutorial: "tutorials/tutorials_xplus.html",
       featured: true
     },
@@ -55,10 +44,10 @@ window.MC_DATA = {
       id: "example-shader",
       category: "shader",
       title: "光影示例",
-      version: "",
+      version: "更新中",
       description: "这里用于展示光影资源卡片，后续替换成你的实际资源",
       image: "assets/images/mc_shaders.avif",
-      tags: ["光影", "Shaders"],
+      tags: ["提取码：2272", "Shaders"],
       download: "https://bkhe.lanzout.com/b00oe6fesd",
       tutorial: "tutorials.html#shader"
     },
@@ -83,7 +72,17 @@ window.MC_DATA = {
       tags: ["皮肤", "Skin"],
       download: "https://namemc.com/minecraft-skins",
       tutorial: "tutorials.html#skin"
-    }
+    },
+    {
+      category: "save",
+      title: "Xplus 存档",
+      version: "2026/9/15",
+      description: "我们的世界",
+      image: "assets/images/save.webp",
+      tags: [],
+      download: URLS.xplus_save,
+      tutorial: "tutorials/tutorials_save.html"
+    },
   ],
 
   tutorials: [
@@ -111,6 +110,14 @@ window.MC_DATA = {
       time: "约 8 分钟",
       featured: true
     },
+    
+    {
+      url: "tutorials/tutorials_save.html",
+      title: "Xplus 存档导入教程",
+      description: "介绍存档导入与注意事项",
+      category: "存档",
+      time: "约 5 分钟"
+    },
     {
       id: "shader",
       title: "Minecraft 光影安装教程",
@@ -131,7 +138,7 @@ window.MC_DATA = {
       description: "介绍正版与离线模式下的常见皮肤使用方式",
       category: "皮肤",
       time: "约 4 分钟"
-    }
+    },
   ],
 
   // 在 window.MC_DATA 内部追加或修改：
@@ -149,7 +156,7 @@ window.MC_DATA = {
           title: "下载基础整合包",
           description: "解压下载好的文件",
           image: "/assets/images/tutorials_xplus/01.webp",
-          downloadUrl: "https://bkhe.lanzout.com/iq8d248megrc",
+          downloadUrl: "https://bkhe.lanzout.com/izfCv494852d",
           downloadText: "获取 Xplus 基础包"
         },
         {
@@ -191,7 +198,40 @@ window.MC_DATA = {
           image: "/assets/images/tutorials_xplus/07.webp",
         },
       ]
+    },
+
+    "tutorials_save": {
+      title: "Xplus 整合包存档导入",
+      subtitle: "全流程说明",
+      breadcrumb: "存档",
+      steps: [
+        {
+          stepNumber: "01",
+          title: "下载存档",
+          description: "解压下载好的文件。由于存档过大，采用极限压缩，解压可能需要点时间",
+          image: "/assets/images/tutorials_save/01.webp",
+          downloadUrl: URLS.xplus_save,
+          downloadText: "获取存档"
+        },
+        {
+          stepNumber: "02",
+          title: "打开版本设置",
+          description: "要注意，当前是什么版本存档就导入到什么版本下",
+          image: "/assets/images/tutorials_save/02.webp",
+        },
+        {
+          stepNumber: "03",
+          title: "打开存档文件夹",
+          description: "",
+          image: "/assets/images/tutorials_save/03.webp",
+        },
+        {
+          stepNumber: "04",
+          title: "拖入",
+          description: "注意，要拖入空白处，千万不要拖入到其他存档文件夹中！",
+          image: "/assets/images/tutorials_save/04.webp",
+        },
+      ]
     }
-    // 后续有新分类教程，如 tutorials_shader.html，只需在这里加 "tutorials_shader": { ... }
   }
 };

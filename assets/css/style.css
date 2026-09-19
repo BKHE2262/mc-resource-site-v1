@@ -219,13 +219,13 @@ button, select { font: inherit; }
   display: flex;
   flex-direction: column;
   gap: 32px;
-  max-width: 1200px; /* 适当放宽容器宽度，容纳 800x500 大图 */
+  max-width: 1600px; /* 适当放宽容器宽度，容纳 800x500 大图 */
   margin: 0 auto;
 }
 
 .tutorial-step-card {
   display: grid;
-  grid-template-columns: 800px 1fr; /* 左侧固定 800px 给大图 */
+  grid-template-columns: 720px 1fr; /* 左侧固定 800px 给大图 */
   gap: 0;                            /* 清除网格间距，实现无缝贴合 */
   background: var(--surface);
   border: 1px solid var(--line);
