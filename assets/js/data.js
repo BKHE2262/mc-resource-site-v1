@@ -31,7 +31,19 @@ window.MC_DATA = {
       id: "xplus",
       category: "modpack",
       title: "Xplus 基础优化整合包",
-      version: "1.x",
+      version: "26.1.2",
+      description: "保持原版体验的基础优化整合包",
+      image: "/assets/images/xplus_logo.jpg",
+      tags: ["整合包", "Fabric", "优化"],
+      download: "https://bkhe.lanzout.com/iq8d248megrc",
+      tutorial: "tutorials/tutorials_xplus.html",
+      featured: true
+    },
+    {
+      id: "xplus",
+      category: "modpack",
+      title: "Xplus 基础优化整合包",
+      version: "26.2",
       description: "保持原版体验的基础优化整合包",
       image: "/assets/images/xplus_logo.jpg",
       tags: ["整合包", "Fabric", "优化"],
@@ -120,5 +132,66 @@ window.MC_DATA = {
       category: "皮肤",
       time: "约 4 分钟"
     }
-  ]
+  ],
+
+  // 在 window.MC_DATA 内部追加或修改：
+  // ... 保留 site, categories, resources, tutorials ...
+
+  // ===== 新增：专门用于 tutorials/ 目录下独立教程页面的数据 =====
+  tutorialDetails: {
+    "tutorials_xplus": {
+      title: "Xplus 整合包安装与配置",
+      subtitle: "从基础部署到自定义 Mod 替换的全流程说明",
+      breadcrumb: "Xplus 整合包",
+      steps: [
+        {
+          stepNumber: "01",
+          title: "下载基础整合包",
+          description: "解压下载好的文件",
+          image: "/assets/images/tutorials_xplus/01.webp",
+          downloadUrl: "https://bkhe.lanzout.com/iq8d248megrc",
+          downloadText: "获取 Xplus 基础包"
+        },
+        {
+          stepNumber: "02",
+          title: "导入整合包到启动器",
+          description: "打开 PCL2 启动器，直接将解压后的文件拖入启动器任意位置",
+          image: "/assets/images/tutorials_xplus/02.webp",
+        },
+        {
+          stepNumber: "03",
+          title: "检查版本是否一致",
+          description: "在PCL首页，核对版本名，不一致需要在\"版本选择\"里找到刚才下载好的版本",
+          image: "/assets/images/tutorials_xplus/03.webp",
+        },
+        {
+          stepNumber: "04",
+          title: "下载 MOD 拓展包",
+          description: "解压下载好的文件",
+          image: "/assets/images/tutorials_xplus/04.webp",
+          downloadUrl: "https://bkhe.lanzout.com/i0IZ0493q4ah",
+          downloadText: "获取 MOD 拓展包"
+        },
+        {
+          stepNumber: "05",
+          title: "删除 Fabric API",
+          description: "这个mod版本比较旧，留着它会报错",
+          image: "/assets/images/tutorials_xplus/05.webp",
+        },
+        {
+          stepNumber: "06",
+          title: "更新 MOD",
+          description: "打开mod文件夹，将刚才下载的四个mod全部拖入",
+          image: "/assets/images/tutorials_xplus/06.webp",
+        },
+        {
+          stepNumber: "07",
+          title: "启动游戏",
+          description: "启动！",
+          image: "/assets/images/tutorials_xplus/07.webp",
+        },
+      ]
+    }
+    // 后续有新分类教程，如 tutorials_shader.html，只需在这里加 "tutorials_shader": { ... }
+  }
 };

@@ -65,7 +65,6 @@
       header.innerHTML = `
         <div class="container nav-wrap">
           <a class="brand" href="/index.html" aria-label="返回首页">
-            <span class="brand-mark">◆</span>
             <span>${escapeHTML(data.site.shortName)}</span>
           </a>
           <button class="menu-button" type="button" aria-label="打开菜单" aria-expanded="false">☰</button>
@@ -87,7 +86,7 @@
         <div class="container footer-grid">
           <div>
             <div class="brand footer-brand"><span class="brand-mark">◆</span><span>${escapeHTML(data.site.shortName)}</span></div>
-            <p>给朋友与社群玩家准备的 Minecraft 资源与教程站。</p>
+            <p>给朋友与社群玩家准备的 Minecraft 资源与教程站</p>
           </div>
           <div>
             <h4>快速入口</h4>
@@ -206,10 +205,62 @@
     });
   }
 
+  // ===== 新增：渲染 tutorials/ 下独立教程页面的函数 =====
+  function renderTutorialDetailPage() {
+    const tutorialId = document.body.dataset.tutorialId;
+    if (!tutorialId) return;
+
+    const detailData = data.tutorialDetails?.[tutorialId];
+    if (!detailData) return;
+
+    const breadcrumbEl = $("#tutorial-breadcrumb-name");
+    const titleEl = $("#tutorial-title");
+    const subtitleEl = $("#tutorial-subtitle");
+
+    if (breadcrumbEl) breadcrumbEl.textContent = detailData.breadcrumb || detailData.title;
+    if (titleEl) titleEl.textContent = detailData.title;
+    if (subtitleEl && detailData.subtitle) subtitleEl.textContent = detailData.subtitle;
+
+    const container = $("#tutorial-steps-container");
+    if (container && Array.isArray(detailData.steps)) {
+      container.innerHTML = detailData.steps.map((step, index) => {
+        const stepNum = step.stepNumber || String(index + 1).padStart(2, '0');
+        
+        const downloadBtnHtml = step.downloadUrl ? `
+          <div class="tutorial-step-action">
+            <a class="button primary" href="${escapeHTML(step.downloadUrl)}" target="_blank" rel="noopener">
+              ${escapeHTML(step.downloadText || "下载相关资源")}
+            </a>
+          </div>
+        ` : '';
+
+        return `
+          <article class="tutorial-step-card reveal">
+            <div class="tutorial-step-media">
+              <img src="${escapeHTML(step.image)}" alt="${escapeHTML(step.title)}" loading="lazy">
+            </div>
+            <div class="tutorial-step-content">
+              <div>
+                <span class="step-badge">STEP ${escapeHTML(stepNum)}</span>
+              </div>
+              <div class="tutorial-step-header">
+                <h3>${escapeHTML(step.title)}</h3>
+              </div>
+              <p>${escapeHTML(step.description)}</p>
+              ${downloadBtnHtml}
+            </div>
+          </article>
+        `;
+      }).join("");
+      setupReveal();
+    }
+  }
+
   renderGlobal();
   renderHome();
   renderListing();
   renderTutorials();
   setActiveNav();
   setupReveal();
+  renderTutorialDetailPage();
 })();
