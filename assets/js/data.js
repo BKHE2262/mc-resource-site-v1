@@ -32,6 +32,18 @@ window.MC_DATA = {
       id: "xplus",
       category: "modpack",
       title: "Xplus 基础优化整合包",
+      version: "26.2",
+      description: "保持原版体验的基础优化整合包",
+      image: "/assets/images/xplus_logo.jpg",
+      tags: ["整合包", "Fabric", "优化"],
+      download: "https://bkhe.lanzout.com/iFFjn4adee8j",
+      tutorial: "tutorials/tutorials_xplus02.html",
+      featured: true
+    },
+    {
+      id: "xplus",
+      category: "modpack",
+      title: "Xplus 基础优化整合包",
       version: "26.1.2",
       description: "保持原版体验的基础优化整合包",
       image: "/assets/images/xplus_logo.jpg",
@@ -190,6 +202,40 @@ window.MC_DATA = {
           title: "更新 MOD",
           description: "打开mod文件夹，将刚才下载的四个mod全部拖入",
           image: "/assets/images/tutorials_xplus/06.webp",
+        },
+        {
+          stepNumber: "07",
+          title: "启动游戏",
+          description: "启动！",
+          image: "/assets/images/tutorials_xplus/07.webp",
+        },
+      ]
+    },
+
+    "tutorials_xplus02": {
+      title: "Xplus 整合包安装与配置",
+      subtitle: "从基础部署到自定义 Mod 替换的全流程说明",
+      breadcrumb: "Xplus 整合包",
+      steps: [
+        {
+          stepNumber: "01",
+          title: "下载基础整合包",
+          description: "解压下载好的文件",
+          image: "/assets/images/tutorials_xplus/01.webp",
+          downloadUrl: "https://bkhe.lanzout.com/iFFjn4adee8j",
+          downloadText: "获取 Xplus 基础包"
+        },
+        {
+          stepNumber: "02",
+          title: "导入整合包到启动器",
+          description: "打开 PCL2 启动器，直接将解压后的文件拖入启动器任意位置",
+          image: "/assets/images/tutorials_xplus/02.webp",
+        },
+        {
+          stepNumber: "03",
+          title: "检查版本是否一致",
+          description: "在PCL首页，核对版本名，不一致需要在\"版本选择\"里找到刚才下载好的版本",
+          image: "/assets/images/tutorials_xplus/03.webp",
         },
         {
           stepNumber: "07",
